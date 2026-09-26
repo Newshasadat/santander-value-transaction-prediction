@@ -144,39 +144,6 @@ Feature Ranking
 
 This ranking was then used to investigate whether smaller feature subsets could achieve comparable predictive performance.
 
----
-
-# ⚖️ Feature Subset Comparison
-
-To evaluate the effect of dimensionality reduction, Random Forest models were compared using different numbers of features.
-
-The following feature subsets were evaluated:
-
-* 50 features
-* 100 features
-* 150 features
-* 200 features
-
-The models were evaluated using **Mean Absolute Error (MAE)**.
-
-### Results
-
-| Number of Features |              MAE |
-| -----------------: | ---------------: |
-|                 50 |     4,984,716.41 |
-|                100 |     4,991,912.71 |
-|                150 |     4,982,318.38 |
-|                200 | **4,645,142.20** |
-
-### Comparison
-
-The results show that the **200-feature model achieved the lowest MAE among the tested feature subsets**.
-
-Reducing the feature set to 50, 100, or 150 features resulted in higher MAE compared with the 200-feature configuration.
-
-This indicates that, for the current Random Forest setup, retaining the larger selected feature set preserved additional predictive information that was lost when using smaller subsets.
-
-> **Important:** These results are based on MAE. The original Kaggle competition metric is RMSLE, so RMSLE should be reported separately if it is calculated for the final models.
 
 ---
 
